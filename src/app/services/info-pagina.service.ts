@@ -17,7 +17,6 @@ export class InfoPaginaService {
   }
 
   private cargarInfo(){
-    console.log('Servicio de infoPagina listo');
     this.http.get('assets/data/data-pagina.json')
       .subscribe((resp: InfoPagina) => {
         this.cargada = true;
@@ -26,7 +25,6 @@ export class InfoPaginaService {
   }
 
   private cargarEquipo(){
-    console.log('Cargando equipo de trabajo...');
     this.http.get('https://angular-html-e01f0.firebaseio.com/equipo.json')
       .subscribe((resp: any)=>{
         this.cargada = true;
